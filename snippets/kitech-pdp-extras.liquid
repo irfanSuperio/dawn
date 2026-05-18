@@ -1,0 +1,123 @@
+{% comment %}
+  KiTech PDP Extras — injected into main-product section
+  Includes: AI Badge Strip · Urgency Row · Delivery Row · Trust Strip · AI Widget · Sticky ATC
+{% endcomment %}
+
+<!-- AI Badge Strip -->
+<div class="kt-pdp-badge-strip">
+  <span class="kt-pdp-badge kt-pdp-badge--ai">🤖 AI-Powered</span>
+  <span class="kt-pdp-badge kt-pdp-badge--new">✦ New 2025</span>
+  <span class="kt-pdp-badge kt-pdp-badge--stock">🔥 Limited Stock</span>
+  <span class="kt-pdp-badge kt-pdp-badge--ship">⚡ Ships in 24h</span>
+</div>
+
+<!-- Urgency Row -->
+<div class="kt-urgency-row">
+  <span class="kt-urgency-dot"></span>
+  <span class="kt-urgency-text">Only <strong class="kt-urgency-stock-num" data-stock="7">7</strong> left — <strong>3 people</strong> are viewing this right now</span>
+</div>
+
+<!-- Delivery Row -->
+<div class="kt-delivery-row">
+  <span class="kt-delivery-icon">🚀</span>
+  <span class="kt-delivery-text">
+    Order in the next <strong id="kt-delivery-timer">03:42:17</strong> for <strong>same-day dispatch</strong>
+    — arrives <strong>Friday, {{ 'now' | date: '%B' }} {{ 'now' | date: '%d' | plus: 2 }}</strong>
+  </span>
+</div>
+
+<!-- Trust Strip -->
+<div class="kt-trust-strip">
+  <div class="kt-trust-item">
+    <span class="kt-trust-icon">🛡️</span>
+    <span class="kt-trust-label">3-Year Warranty</span>
+  </div>
+  <div class="kt-trust-item">
+    <span class="kt-trust-icon">↩️</span>
+    <span class="kt-trust-label">30-Day Returns</span>
+  </div>
+  <div class="kt-trust-item">
+    <span class="kt-trust-icon">🔒</span>
+    <span class="kt-trust-label">Secure Checkout</span>
+  </div>
+  <div class="kt-trust-item">
+    <span class="kt-trust-icon">🌍</span>
+    <span class="kt-trust-label">Free World Shipping</span>
+  </div>
+</div>
+
+<!-- AI Recommendation Strip -->
+<div class="kt-ai-rec-strip">
+  <div class="kt-ai-rec-strip__icon">🤖</div>
+  <div class="kt-ai-rec-strip__content">
+    <p class="kt-ai-rec-strip__label">KiTech AI recommends</p>
+    <p class="kt-ai-rec-strip__text">Based on your viewing history, the <strong>Obsidian Black · 512GB</strong> configuration is your best match. Most popular with creative professionals.</p>
+  </div>
+</div>
+
+<!-- Sticky ATC Bar -->
+<div class="kt-sticky-atc" role="complementary" aria-label="Quick purchase bar">
+  <div class="kt-sticky-atc__inner page-width">
+    <div class="kt-sticky-atc__info">
+      <span class="kt-sticky-atc__name">{{ product.title }}</span>
+      <span class="kt-sticky-atc__price">{{ product.price | money }}</span>
+    </div>
+    <div class="kt-sticky-atc__actions">
+      <div class="kt-sticky-atc__stars">★★★★★ <span>(2,847)</span></div>
+      <button class="kt-sticky-atc__btn" type="button">Add to Cart</button>
+    </div>
+  </div>
+</div>
+
+<!-- AI Floating Widget -->
+<div class="kt-ai-widget" role="complementary" aria-label="AI Assistant">
+  <button class="kt-ai-widget__btn" aria-label="Open AI Assistant" aria-expanded="false">
+    <span class="kt-ai-widget__btn-icon">🤖</span>
+    <span class="kt-ai-widget__btn-label">AI Help</span>
+  </button>
+  <div class="kt-ai-widget__popup" role="dialog" aria-label="KiTech AI Assistant">
+    <div class="kt-ai-widget__popup-header">
+      <div class="kt-ai-widget__popup-avatar">🤖</div>
+      <div>
+        <p class="kt-ai-widget__popup-name">KiTech AI</p>
+        <p class="kt-ai-widget__popup-status">Online · typically replies instantly</p>
+      </div>
+    </div>
+    <div class="kt-ai-widget__popup-body">
+      <div class="kt-ai-widget__message kt-ai-widget__message--ai">
+        Hi! I'm KiTech AI. I can answer any question about the Pro — specs, compatibility, recommendations, shipping. What would you like to know?
+      </div>
+      <div class="kt-ai-widget__suggestions">
+        <button class="kt-ai-widget__suggestion">Which storage should I choose?</button>
+        <button class="kt-ai-widget__suggestion">Compare Pro vs Pro Max</button>
+        <button class="kt-ai-widget__suggestion">Is it compatible with my accessories?</button>
+      </div>
+    </div>
+    <div class="kt-ai-widget__popup-input">
+      <input type="text" placeholder="Ask anything about KiTech Pro…" aria-label="Chat input">
+      <button aria-label="Send message">➤</button>
+    </div>
+  </div>
+</div>
+
+<!-- Delivery Countdown Script -->
+<script>
+(function() {
+  var timerEl = document.getElementById('kt-delivery-timer');
+  if (!timerEl) return;
+  // Random time between 2-6 hours from now
+  var totalSecs = Math.floor(Math.random() * (6 * 3600 - 2 * 3600) + 2 * 3600);
+  function tick() {
+    if (totalSecs <= 0) { timerEl.textContent = '00:00:00'; return; }
+    totalSecs--;
+    var h = Math.floor(totalSecs / 3600);
+    var m = Math.floor((totalSecs % 3600) / 60);
+    var s = totalSecs % 60;
+    timerEl.textContent =
+      String(h).padStart(2,'0') + ':' +
+      String(m).padStart(2,'0') + ':' +
+      String(s).padStart(2,'0');
+  }
+  setInterval(tick, 1000);
+})();
+</script>

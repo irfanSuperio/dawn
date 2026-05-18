@@ -256,6 +256,12 @@
     {% endstyle %}
 
     {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ 'kitech.css' | asset_url | stylesheet_tag }}
+    {%- if request.page_type == 'product' -%}
+      {{ 'kitech-pdp.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'kitech-pdp.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {%- render 'kitech-images' -%}
     <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
 
     {%- if settings.cart_type == 'drawer' -%}
