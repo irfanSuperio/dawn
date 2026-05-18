@@ -1,0 +1,102 @@
+<style>
+/* ── KiTech Hero Image ── */
+.kt-hero__img {
+  content: url("{{ 'hero-bg.jpg' | asset_url }}");
+}
+
+/* ── Hero background fallback layers ── */
+.kt-hero {
+  background-image: url("{{ 'hero-bg.jpg' | asset_url }}");
+}
+
+/* ── Brand story image (image-with-text) ── */
+.image-with-text__media.image-with-text__media--placeholder,
+.image-with-text__media:not(:has(img)) {
+  background-image: url("{{ 'feature-2.jpg' | asset_url }}") !important;
+  background-size: cover !important;
+  background-position: center !important;
+  min-height: 520px !important;
+}
+
+/* ── Why KiTech rows ── */
+.multirow .image-with-text__media.image-with-text__media--placeholder:nth-of-type(1) {
+  background-image: url("{{ 'feature-1.jpg' | asset_url }}") !important;
+}
+.multirow .image-with-text__media.image-with-text__media--placeholder:nth-of-type(2) {
+  background-image: url("{{ 'feature-2.jpg' | asset_url }}") !important;
+}
+.multirow .image-with-text__media.image-with-text__media--placeholder:nth-of-type(3) {
+  background-image: url("{{ 'feature-3.jpg' | asset_url }}") !important;
+}
+
+/* ── Category cards ── */
+.collection-list__item:nth-child(1) .card__media:not(:has(img)),
+.collection-list__item:nth-child(1) .card__media.placeholder {
+  background-image: url("{{ 'product-1.jpg' | asset_url }}") !important;
+  background-size: cover !important; background-position: center !important; min-height: 280px !important;
+}
+.collection-list__item:nth-child(2) .card__media:not(:has(img)),
+.collection-list__item:nth-child(2) .card__media.placeholder {
+  background-image: url("{{ 'product-2.jpg' | asset_url }}") !important;
+  background-size: cover !important; background-position: center !important; min-height: 280px !important;
+}
+.collection-list__item:nth-child(3) .card__media:not(:has(img)),
+.collection-list__item:nth-child(3) .card__media.placeholder {
+  background-image: url("{{ 'product-3.jpg' | asset_url }}") !important;
+  background-size: cover !important; background-position: center !important; min-height: 280px !important;
+}
+.collection-list__item:nth-child(4) .card__media:not(:has(img)),
+.collection-list__item:nth-child(4) .card__media.placeholder {
+  background-image: url("{{ 'product-4.jpg' | asset_url }}") !important;
+  background-size: cover !important; background-position: center !important; min-height: 280px !important;
+}
+
+/* ── AI Section background ── */
+.kt-ai-section__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("{{ 'ai-section.jpg' | asset_url }}");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.04;
+}
+
+/* ── CTA Banner background ── */
+.kt-cta__bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("{{ 'banner-cta.jpg' | asset_url }}");
+  background-size: cover;
+  background-position: center;
+  opacity: 0.05;
+}
+</style>
+
+<script>
+// Auto-inject hero image
+document.addEventListener('DOMContentLoaded', function () {
+  var heroImg = document.querySelector('.kt-hero__img');
+  if (heroImg) {
+    heroImg.src = "{{ 'hero-bg.jpg' | asset_url }}";
+    heroImg.removeAttribute('data-src');
+  }
+
+  // Multirow image fallbacks
+  var rowMedia = document.querySelectorAll('.multirow .image-with-text__media');
+  var rowImgs = [
+    "{{ 'feature-1.jpg' | asset_url }}",
+    "{{ 'feature-2.jpg' | asset_url }}",
+    "{{ 'feature-3.jpg' | asset_url }}"
+  ];
+  rowMedia.forEach(function(el, i) {
+    if (!el.querySelector('img') && rowImgs[i]) {
+      el.style.backgroundImage = 'url("' + rowImgs[i] + '")';
+      el.style.backgroundSize = 'cover';
+      el.style.backgroundPosition = 'center';
+      el.style.minHeight = '400px';
+    }
+  });
+});
+</script>

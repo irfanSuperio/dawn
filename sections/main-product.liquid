@@ -85,6 +85,14 @@
         >
           {%- assign product_form_id = 'product-form-' | append: section.id -%}
 
+          <!-- KiTech PDP Premium Extras -->
+          <div class="kt-pdp-badge-strip">
+            <span class="kt-pdp-badge kt-pdp-badge--ai">🤖 AI-Powered</span>
+            <span class="kt-pdp-badge kt-pdp-badge--new">✦ New 2025</span>
+            <span class="kt-pdp-badge kt-pdp-badge--stock">🔥 Limited Stock</span>
+            <span class="kt-pdp-badge kt-pdp-badge--ship">⚡ Ships in 24h</span>
+          </div>
+
           {%- for block in section.blocks -%}
             {%- case block.type -%}
               {%- when '@app' -%}
@@ -485,6 +493,28 @@
                   section_id: section.id,
                   show_pickup_availability: true
                 -%}
+                <!-- KiTech PDP Trust & Urgency -->
+                <div class="kt-urgency-row">
+                  <span class="kt-urgency-dot"></span>
+                  <span class="kt-urgency-text">Only <strong class="kt-urgency-stock-num" data-stock="7">7</strong> left — <strong>3 people</strong> viewing now</span>
+                </div>
+                <div class="kt-delivery-row">
+                  <span class="kt-delivery-icon">🚀</span>
+                  <span class="kt-delivery-text">Order in <strong id="kt-delivery-timer">03:42:17</strong> for <strong>same-day dispatch</strong></span>
+                </div>
+                <div class="kt-trust-strip">
+                  <div class="kt-trust-item"><span class="kt-trust-icon">🛡️</span><span class="kt-trust-label">3-Year Warranty</span></div>
+                  <div class="kt-trust-item"><span class="kt-trust-icon">↩️</span><span class="kt-trust-label">30-Day Returns</span></div>
+                  <div class="kt-trust-item"><span class="kt-trust-icon">🔒</span><span class="kt-trust-label">Secure Payment</span></div>
+                  <div class="kt-trust-item"><span class="kt-trust-icon">🌍</span><span class="kt-trust-label">Free Shipping</span></div>
+                </div>
+                <div class="kt-ai-rec-strip">
+                  <div class="kt-ai-rec-strip__icon">🤖</div>
+                  <div class="kt-ai-rec-strip__content">
+                    <p class="kt-ai-rec-strip__label">KiTech AI recommends</p>
+                    <p class="kt-ai-rec-strip__text">Based on your profile, <strong>Obsidian Black · 512GB</strong> is your best match.</p>
+                  </div>
+                </div>
               {%- when 'rating' -%}
                 {%- if product.metafields.reviews.rating.value != blank -%}
                   <div class="rating-wrapper">
@@ -736,6 +766,7 @@
       {{ product | structured_data }}
     </script>
   </div>
+  {%- render 'kitech-pdp-extras', product: product -%}
 </product-info>
 
 {% schema %}

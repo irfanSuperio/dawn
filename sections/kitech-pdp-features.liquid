@@ -1,0 +1,131 @@
+{{ 'kitech-pdp.css' | asset_url | stylesheet_tag }}
+
+<section class="kt-features page-width" id="kt-features">
+  <div class="kt-features__header">
+    <p class="kt-section-eyebrow">Why KiTech Pro</p>
+    <h2 class="kt-features__title">Engineered for the <span class="kt-text-gradient">Extraordinary</span></h2>
+    <p class="kt-features__subtitle">Three years of research. Thousands of iterations. One perfect machine.</p>
+  </div>
+
+  <!-- Stat Cards Row -->
+  <div class="kt-feature-cards">
+    <div class="kt-feature-card">
+      <div class="kt-feature-card__num">4.2<span>GHz</span></div>
+      <div class="kt-feature-card__label">Neural Engine Clock</div>
+      <div class="kt-feature-card__sub">World's fastest AI chip</div>
+    </div>
+    <div class="kt-feature-card">
+      <div class="kt-feature-card__num">48<span>hr</span></div>
+      <div class="kt-feature-card__label">Battery Life</div>
+      <div class="kt-feature-card__sub">Adaptive power management</div>
+    </div>
+    <div class="kt-feature-card">
+      <div class="kt-feature-card__num">0.3<span>ms</span></div>
+      <div class="kt-feature-card__label">AI Response Time</div>
+      <div class="kt-feature-card__sub">Real-time intelligence</div>
+    </div>
+    <div class="kt-feature-card">
+      <div class="kt-feature-card__num">6K</div>
+      <div class="kt-feature-card__label">Display Resolution</div>
+      <div class="kt-feature-card__sub">ProMotion 144Hz OLED</div>
+    </div>
+  </div>
+
+  <!-- Large Feature Rows -->
+  <div class="kt-feature-row">
+    <div class="kt-feature-row__media">
+      <div class="kt-feature-row__img-wrap">
+        {%- if section.settings.feature_1_image != blank -%}
+          {{ section.settings.feature_1_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+        {%- else -%}
+          <img src="{{ 'feature-1.jpg' | asset_url }}" alt="AI Neural Engine" loading="lazy">
+        {%- endif -%}
+        <div class="kt-feature-row__glow"></div>
+      </div>
+    </div>
+    <div class="kt-feature-row__content">
+      <span class="kt-feature-row__badge">AI Core</span>
+      <h3 class="kt-feature-row__title">Neural Engine That Thinks Before You Do</h3>
+      <p class="kt-feature-row__text">The KiTech Neural Processing Unit runs 42 trillion operations per second — predicting your needs, optimizing every process, and learning your patterns to deliver a truly personalized experience that evolves with you.</p>
+      <ul class="kt-feature-row__list">
+        <li>42 TOPS on-device AI processing</li>
+        <li>Continuous learning without cloud dependency</li>
+        <li>Adaptive performance based on usage patterns</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kt-feature-row kt-feature-row--reverse">
+    <div class="kt-feature-row__media">
+      <div class="kt-feature-row__img-wrap">
+        {%- if section.settings.feature_2_image != blank -%}
+          {{ section.settings.feature_2_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+        {%- else -%}
+          <img src="{{ 'feature-2.jpg' | asset_url }}" alt="Quantum Display" loading="lazy">
+        {%- endif -%}
+        <div class="kt-feature-row__glow kt-feature-row__glow--purple"></div>
+      </div>
+    </div>
+    <div class="kt-feature-row__content">
+      <span class="kt-feature-row__badge">Display</span>
+      <h3 class="kt-feature-row__title">6K OLED. Every Pixel Perfected.</h3>
+      <p class="kt-feature-row__text">Our custom-engineered ProMotion OLED panel delivers 1,000,000:1 contrast ratio with local dimming zones. Colors so accurate, color scientists use it as a reference display. Now with AI-powered scene detection for automatic calibration.</p>
+      <ul class="kt-feature-row__list">
+        <li>6K resolution — 458 pixels per inch</li>
+        <li>144Hz ProMotion adaptive refresh</li>
+        <li>HDR10+ and Dolby Vision certified</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kt-feature-row">
+    <div class="kt-feature-row__media">
+      <div class="kt-feature-row__img-wrap">
+        {%- if section.settings.feature_3_image != blank -%}
+          {{ section.settings.feature_3_image | image_url: width: 900 | image_tag: loading: 'lazy' }}
+        {%- else -%}
+          <img src="{{ 'feature-3.jpg' | asset_url }}" alt="48hr Battery" loading="lazy">
+        {%- endif -%}
+        <div class="kt-feature-row__glow kt-feature-row__glow--green"></div>
+      </div>
+    </div>
+    <div class="kt-feature-row__content">
+      <span class="kt-feature-row__badge">Power</span>
+      <h3 class="kt-feature-row__title">48 Hours. Zero Compromise.</h3>
+      <p class="kt-feature-row__text">KiTech's adaptive power architecture intelligently allocates energy across every component. Heavy workload? Performance maximized. Idle? Power reduced to whisper levels. The result: two full days on a single charge.</p>
+      <ul class="kt-feature-row__list">
+        <li>48hr mixed-use battery life</li>
+        <li>100W MagCharge — 0 to 80% in 28 minutes</li>
+        <li>Reverse wireless charging for accessories</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KiTech PDP Features",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "feature_1_image",
+      "label": "Feature 1 Image (AI)"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_2_image",
+      "label": "Feature 2 Image (Display)"
+    },
+    {
+      "type": "image_picker",
+      "id": "feature_3_image",
+      "label": "Feature 3 Image (Battery)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "KiTech PDP Features"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,180 @@
+{{ 'kitech-pdp.css' | asset_url | stylesheet_tag }}
+
+<section class="kt-specs page-width" id="kt-specs">
+  <div class="kt-specs__header">
+    <p class="kt-section-eyebrow">Full Specifications</p>
+    <h2 class="kt-specs__title">Built to <span class="kt-text-gradient">Impress</span></h2>
+  </div>
+
+  <!-- Tab Navigation -->
+  <div class="kt-specs-tabs">
+    <button class="kt-specs-tab active" data-tab="performance">Performance</button>
+    <button class="kt-specs-tab" data-tab="connectivity">Connectivity</button>
+    <button class="kt-specs-tab" data-tab="display">Display</button>
+    <button class="kt-specs-tab" data-tab="physical">Physical</button>
+  </div>
+
+  <!-- Performance Panel -->
+  <div class="kt-specs-panel" data-panel="performance">
+    <div class="kt-specs-table">
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Processor</span>
+        <span class="kt-specs-value">KiTech Neural X1 — 5nm Architecture</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Clock Speed</span>
+        <span class="kt-specs-value">4.2 GHz (Performance) · 2.1 GHz (Efficiency)</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">AI Processing</span>
+        <span class="kt-specs-value">42 TOPS Neural Engine</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">RAM</span>
+        <span class="kt-specs-value">32GB LPDDR5X @ 8,533 MHz</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Storage</span>
+        <span class="kt-specs-value">256GB / 512GB / 1TB NVMe SSD</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">GPU</span>
+        <span class="kt-specs-value">KiTech VisionCore G9 — 40-core</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Battery</span>
+        <span class="kt-specs-value">9,800 mAh Silicon-Carbon</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Battery Life</span>
+        <span class="kt-specs-value">Up to 48 hours mixed use</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Charging</span>
+        <span class="kt-specs-value">100W MagCharge · 50W Wireless · 15W Reverse</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Connectivity Panel -->
+  <div class="kt-specs-panel" data-panel="connectivity" style="display:none">
+    <div class="kt-specs-table">
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">5G</span>
+        <span class="kt-specs-value">Sub-6 GHz · mmWave · SA/NSA</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Wi-Fi</span>
+        <span class="kt-specs-value">Wi-Fi 7 (802.11be) — 2.4/5/6 GHz</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Bluetooth</span>
+        <span class="kt-specs-value">Bluetooth 5.4 with LE Audio</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">USB</span>
+        <span class="kt-specs-value">USB4 Gen 3 (40Gbps) · Thunderbolt 4</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">NFC</span>
+        <span class="kt-specs-value">NFC 2.0 with Ultra-Wideband</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Satellite</span>
+        <span class="kt-specs-value">Emergency SOS via Satellite</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Location</span>
+        <span class="kt-specs-value">GPS · GLONASS · Galileo · BeiDou · QZSS</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Display Panel -->
+  <div class="kt-specs-panel" data-panel="display" style="display:none">
+    <div class="kt-specs-table">
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Panel Type</span>
+        <span class="kt-specs-value">ProMotion OLED (Custom KiTech)</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Resolution</span>
+        <span class="kt-specs-value">6K — 5120 × 2160 px</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Pixel Density</span>
+        <span class="kt-specs-value">458 PPI</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Refresh Rate</span>
+        <span class="kt-specs-value">1–144 Hz ProMotion Adaptive</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Brightness</span>
+        <span class="kt-specs-value">2000 nits peak · 1200 nits typical</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Contrast</span>
+        <span class="kt-specs-value">1,000,000 : 1</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Color Gamut</span>
+        <span class="kt-specs-value">DCI-P3 · sRGB · Rec. 2020</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Certification</span>
+        <span class="kt-specs-value">HDR10+ · Dolby Vision · DisplayHDR 2000</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Physical Panel -->
+  <div class="kt-specs-panel" data-panel="physical" style="display:none">
+    <div class="kt-specs-table">
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Dimensions</span>
+        <span class="kt-specs-value">162.4 × 74.6 × 7.2 mm</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Weight</span>
+        <span class="kt-specs-value">186g (Titanium) · 194g (Obsidian)</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Build Material</span>
+        <span class="kt-specs-value">Aerospace-grade Titanium · Ceramic back</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Colors</span>
+        <span class="kt-specs-value">Obsidian Black · Lunar Silver · Abyss Blue · Aurora Gold</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Water Resistance</span>
+        <span class="kt-specs-value">IP68 — 6m for 30 minutes</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Biometrics</span>
+        <span class="kt-specs-value">Under-display Ultrasonic Fingerprint · 3D Face ID</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">Camera (Main)</span>
+        <span class="kt-specs-value">200MP f/1.6 · OIS · AI Scene Engine</span>
+      </div>
+      <div class="kt-specs-row">
+        <span class="kt-specs-label">OS</span>
+        <span class="kt-specs-value">KiTech OS 2.0 — AI-First Interface</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KiTech PDP Specs",
+  "settings": [],
+  "presets": [
+    {
+      "name": "KiTech PDP Specs"
+    }
+  ]
+}
+{% endschema %}

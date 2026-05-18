@@ -1,0 +1,95 @@
+{{ 'kitech-pdp.css' | asset_url | stylesheet_tag }}
+
+<section class="kt-compare page-width" id="kt-compare">
+  <div class="kt-compare__header">
+    <p class="kt-section-eyebrow">Compare Models</p>
+    <h2 class="kt-compare__title">Find Your <span class="kt-text-gradient">Perfect Match</span></h2>
+    <p class="kt-compare__subtitle">Every KiTech is exceptional. The Pro Max is transcendent.</p>
+  </div>
+
+  <div class="kt-compare-grid">
+
+    <!-- Pro Lite -->
+    <div class="kt-compare-card">
+      <div class="kt-compare-card__header">
+        <p class="kt-compare-card__model">KiTech Pro Lite</p>
+        <p class="kt-compare-card__price">$899</p>
+        <p class="kt-compare-card__tagline">Power meets accessibility</p>
+      </div>
+      <ul class="kt-compare-card__list">
+        <li class="has">Neural X1 — 3.8 GHz</li>
+        <li class="has">16GB RAM</li>
+        <li class="has">256GB / 512GB Storage</li>
+        <li class="has">4K OLED · 90Hz</li>
+        <li class="has">30 TOPS AI Engine</li>
+        <li class="has">36hr Battery</li>
+        <li class="has">65W Fast Charge</li>
+        <li class="has">IP67</li>
+        <li class="no">mmWave 5G</li>
+        <li class="no">Titanium Frame</li>
+        <li class="no">Satellite Connectivity</li>
+      </ul>
+      <a href="#" class="kt-compare-card__btn kt-compare-card__btn--outline">Shop Pro Lite</a>
+    </div>
+
+    <!-- Pro (Featured) -->
+    <div class="kt-compare-card kt-compare-card--featured">
+      <div class="kt-compare-card__crown">★ Most Popular</div>
+      <div class="kt-compare-card__header">
+        <p class="kt-compare-card__model">KiTech Pro</p>
+        <p class="kt-compare-card__price">$1,299</p>
+        <p class="kt-compare-card__tagline">The flagship experience</p>
+      </div>
+      <ul class="kt-compare-card__list">
+        <li class="has">Neural X1 — 4.2 GHz</li>
+        <li class="has">32GB RAM</li>
+        <li class="has">256GB / 512GB / 1TB</li>
+        <li class="has">6K OLED · 144Hz</li>
+        <li class="has">42 TOPS AI Engine</li>
+        <li class="has">48hr Battery</li>
+        <li class="has">100W MagCharge</li>
+        <li class="has">IP68</li>
+        <li class="has">mmWave 5G</li>
+        <li class="has">Titanium Frame</li>
+        <li class="no">Satellite Connectivity</li>
+      </ul>
+      <a href="#" class="kt-compare-card__btn">Add to Cart — $1,299</a>
+    </div>
+
+    <!-- Pro Max -->
+    <div class="kt-compare-card">
+      <div class="kt-compare-card__header">
+        <p class="kt-compare-card__model">KiTech Pro Max</p>
+        <p class="kt-compare-card__price">$1,699</p>
+        <p class="kt-compare-card__tagline">No limits whatsoever</p>
+      </div>
+      <ul class="kt-compare-card__list">
+        <li class="has">Neural X1 Ultra — 4.8 GHz</li>
+        <li class="has">64GB RAM</li>
+        <li class="has">512GB / 1TB / 2TB</li>
+        <li class="has">8K OLED · 165Hz</li>
+        <li class="has">84 TOPS AI Engine</li>
+        <li class="has">72hr Battery</li>
+        <li class="has">120W UltraCharge</li>
+        <li class="has">IP69K</li>
+        <li class="has">mmWave 5G</li>
+        <li class="has">Titanium Frame</li>
+        <li class="has">Satellite Connectivity</li>
+      </ul>
+      <a href="#" class="kt-compare-card__btn kt-compare-card__btn--outline">Shop Pro Max</a>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KiTech PDP Comparison",
+  "settings": [],
+  "presets": [
+    {
+      "name": "KiTech PDP Comparison"
+    }
+  ]
+}
+{% endschema %}

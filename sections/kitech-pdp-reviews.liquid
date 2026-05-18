@@ -1,0 +1,128 @@
+{{ 'kitech-pdp.css' | asset_url | stylesheet_tag }}
+
+<section class="kt-reviews page-width" id="kt-reviews">
+  <div class="kt-reviews__header">
+    <p class="kt-section-eyebrow">Customer Reviews</p>
+    <h2 class="kt-reviews__title">Loved by <span class="kt-text-gradient">Thousands</span></h2>
+  </div>
+
+  <div class="kt-reviews__overview">
+    <div class="kt-reviews__score">
+      <div class="kt-reviews__score-num">4.9</div>
+      <div class="kt-reviews__stars">★★★★★</div>
+      <div class="kt-reviews__count">2,847 verified reviews</div>
+    </div>
+
+    <div class="kt-reviews__bars">
+      <div class="kt-rating-row">
+        <span class="kt-rating-row__label">5 stars</span>
+        <div class="kt-rating-bar">
+          <div class="kt-rating-bar__fill" style="width:89%"></div>
+        </div>
+        <span class="kt-rating-row__pct">89%</span>
+      </div>
+      <div class="kt-rating-row">
+        <span class="kt-rating-row__label">4 stars</span>
+        <div class="kt-rating-bar">
+          <div class="kt-rating-bar__fill" style="width:7%"></div>
+        </div>
+        <span class="kt-rating-row__pct">7%</span>
+      </div>
+      <div class="kt-rating-row">
+        <span class="kt-rating-row__label">3 stars</span>
+        <div class="kt-rating-bar">
+          <div class="kt-rating-bar__fill" style="width:3%"></div>
+        </div>
+        <span class="kt-rating-row__pct">3%</span>
+      </div>
+      <div class="kt-rating-row">
+        <span class="kt-rating-row__label">2 stars</span>
+        <div class="kt-rating-bar">
+          <div class="kt-rating-bar__fill" style="width:1%"></div>
+        </div>
+        <span class="kt-rating-row__pct">1%</span>
+      </div>
+      <div class="kt-rating-row">
+        <span class="kt-rating-row__label">1 star</span>
+        <div class="kt-rating-bar">
+          <div class="kt-rating-bar__fill" style="width:0%"></div>
+        </div>
+        <span class="kt-rating-row__pct">0%</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="kt-reviews__grid">
+
+    <div class="kt-review-card">
+      <div class="kt-review-card__top">
+        <div class="kt-review-card__avatar">AK</div>
+        <div>
+          <div class="kt-review-card__name">Alex K. <span class="kt-review-card__badge">Verified</span></div>
+          <div class="kt-review-card__stars">★★★★★</div>
+        </div>
+        <div class="kt-review-card__date">2 weeks ago</div>
+      </div>
+      <h4 class="kt-review-card__title">"This changed how I think about technology"</h4>
+      <p class="kt-review-card__text">I've owned every flagship from every major brand for the last decade. Nothing comes close to the KiTech Pro. The AI anticipates everything — my schedule, my habits, my preferences. It's not a phone, it's an extension of my mind. Battery easily lasts two days with heavy use. Display is absolutely stunning — colors that look more real than reality.</p>
+      <div class="kt-review-card__footer">
+        <span>Design: ★★★★★</span>
+        <span>Performance: ★★★★★</span>
+        <span>Battery: ★★★★★</span>
+      </div>
+    </div>
+
+    <div class="kt-review-card">
+      <div class="kt-review-card__top">
+        <div class="kt-review-card__avatar" style="background: linear-gradient(135deg,#BF5AF2,#FF375F)">SM</div>
+        <div>
+          <div class="kt-review-card__name">Sarah M. <span class="kt-review-card__badge">Verified</span></div>
+          <div class="kt-review-card__stars">★★★★★</div>
+        </div>
+        <div class="kt-review-card__date">1 month ago</div>
+      </div>
+      <h4 class="kt-review-card__title">"Worth every single penny"</h4>
+      <p class="kt-review-card__text">As a professional photographer and filmmaker, the display and camera system are world-class. I use this as my primary editing monitor now. The AI color grading suggestions are eerily accurate — it's like having a professional colorist in my pocket. Build quality is exceptional. Titanium feels premium without being heavy.</p>
+      <div class="kt-review-card__footer">
+        <span>Camera: ★★★★★</span>
+        <span>Display: ★★★★★</span>
+        <span>Value: ★★★★★</span>
+      </div>
+    </div>
+
+    <div class="kt-review-card">
+      <div class="kt-review-card__top">
+        <div class="kt-review-card__avatar" style="background: linear-gradient(135deg,#30D158,#0A84FF)">JR</div>
+        <div>
+          <div class="kt-review-card__name">James R. <span class="kt-review-card__badge">Verified</span></div>
+          <div class="kt-review-card__stars">★★★★★</div>
+        </div>
+        <div class="kt-review-card__date">3 weeks ago</div>
+      </div>
+      <h4 class="kt-review-card__title">"The future is here and it's called KiTech"</h4>
+      <p class="kt-review-card__text">Engineer here. I stress-tested the Neural Engine with real ML inference tasks. Results were jaw-dropping — 3x faster than anything else on the market, with half the power consumption. The AI response time of 0.3ms is real, not marketing. USB4 at 40Gbps is a game changer for my workflow. KiTech has built something genuinely revolutionary.</p>
+      <div class="kt-review-card__footer">
+        <span>AI Performance: ★★★★★</span>
+        <span>Build: ★★★★★</span>
+        <span>Software: ★★★★★</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="kt-reviews__cta">
+    <button class="kt-reviews__load-more">Load More Reviews (2,844)</button>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "KiTech PDP Reviews",
+  "settings": [],
+  "presets": [
+    {
+      "name": "KiTech PDP Reviews"
+    }
+  ]
+}
+{% endschema %}
